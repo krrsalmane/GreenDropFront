@@ -1,1 +1,93 @@
-<p>admin-dashboard works!</p>
+<main class="admin-dashboard">
+  <h1>Admin Dashboard</h1>
+  <p>Manage all agricultural data effectively.</p>
+
+  <section class="fields-table">
+    <h2>Fields</h2>
+    <button class="add-button">Add Field</button>
+    <table>
+      <tr>
+        <th>Field Name</th>
+        <th>Size (hectares)</th>
+        <th>Soil Type</th>
+        <th>Crop</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td>Field 1</td>
+        <td>2.5</td>
+        <td>Sandy Loam</td>
+        <td>Wheat</td>
+        <td>
+          <a>View Details</a> | <a>Edit</a> | <a>Remove</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Field 2</td>
+        <td>1.8</td>
+        <td>Clay</td>
+        <td>Corn</td>
+        <td>
+          <a>View Details</a> | <a>Edit</a> | <a>Remove</a>
+        </td>
+      </tr>
+    </table>
+    <img src="assets/field-generic.jpg" alt="Generic field" class="table-image">
+  </section>
+
+  <section class="crops-table">
+    <h2>Crops</h2>
+    <button class="add-button">Add Crop</button>
+    <table>
+      <tr>
+        <th>Crop Type</th>
+        <th>Water Requirements (Liters/Week)</th>
+        <th>Growing Season</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td>Wheat</td>
+        <td>1500</td>
+        <td>Winter</td>
+        <td>
+          <a>View Details</a> | <a>Edit</a> | <a>Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Corn</td>
+        <td>2000</td>
+        <td>Summer</td>
+        <td>
+          <a>View Details</a> | <a>Edit</a> | <a>Delete</a>
+        </td>
+      </tr>
+    </table>
+    <img src="assets/crop-generic.jpg" alt="Generic crop" class="table-image">
+  </section>
+
+  <section class="irrigation-table">
+    <h2>Irrigation Sessions</h2>
+    <button class="add-button">Book Session</button>
+    <table>
+      <tr>
+        <th>Crop</th>
+        <th>Field</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Water Quantity</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td>Tomatoes</td>
+        <td>Field 1</td>
+        <td>Jul 15, 2024</td>
+        <td>10:00 AM</td>
+        <td>5000 L</td>
+        <td><app-status-indicator status="scheduled"></app-status-indicator></td>
+        <td><a>View Details</a></td>
+      </tr>
+    </table>
+    <img src="assets/irrigation-generic.jpg" alt="Generic irrigation" class="table-image">
+  </section>
+</main>

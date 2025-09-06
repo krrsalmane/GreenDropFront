@@ -1,0 +1,35 @@
+.sidebar {
+  width: 250px;
+  background-color: #f0f8f0;
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+  transition: transform 0.3s;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: #2e7d32;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+}
+
+.sidebar-item.active {
+  background-color: #e6ffe6;
+  font-weight: bold;
+}
+
+.sidebar-item .icon {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}

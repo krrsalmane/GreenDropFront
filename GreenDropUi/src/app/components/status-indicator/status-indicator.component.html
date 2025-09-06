@@ -1,1 +1,4 @@
-<p>status-indicator works!</p>
+<span class="status-indicator" [ngClass]="status">
+  <span class="status-dot"></span>
+  <span class="status-label">{{ getLabel() }}</span>
+</span>

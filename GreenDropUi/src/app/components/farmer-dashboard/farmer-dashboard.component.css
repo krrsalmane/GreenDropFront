@@ -1,0 +1,52 @@
+.farmer-dashboard {
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.weather img, .field img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.irrigation .field {
+  margin-bottom: 2rem;
+}
+
+.next-session {
+  color: #4a704a;
+}
+
+.field-status table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.field-status th, .field-status td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.field-status th {
+  background-color: #e6ffe6;
+}
