@@ -1,1 +1,48 @@
-<p>home works!</p>
+<main class="home">
+  <section class="welcome">
+    <h1>Dashboard</h1>
+    <p>Here's your irrigation overview for today.</p>
+  </section>
+
+  <section class="weather">
+    <h2>Weather</h2>
+    <p>Sunny, 28°C</p>
+    <p>Beni Mellal, Morocco</p>
+    <img src="assets/weather-sunny.jpg" alt="Sunny weather">
+  </section>
+
+  <section class="irrigation">
+    <h2>Upcoming Irrigation</h2>
+    <div class="field">
+      <p>Field 1: Wheat</p>
+      <p class="next-session">Next session: Tomorrow, 6:00 AM</p>
+      <img src="assets/field-wheat.jpg" alt="Wheat field">
+    </div>
+    <div class="field">
+      <p>Field 2: Olives</p>
+      <p class="next-session">Next session: In 2 days, 7:00 AM</p>
+      <img src="assets/field-olives.jpg" alt="Olive field">
+    </div>
+  </section>
+
+  <section class="field-status">
+    <h2>Field Status</h2>
+    <table>
+      <tr>
+        <th>Field</th>
+        <th>Crop</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>Field 1</td>
+        <td>Wheat</td>
+        <td><span class="status optimal">Optimal</span></td>
+      </tr>
+      <tr>
+        <td>Field 2</td>
+        <td>Olives</td>
+        <td><span class="status needs-attention">Needs Attention</span></td>
+      </tr>
+    </table>
+  </section>
+</main>
