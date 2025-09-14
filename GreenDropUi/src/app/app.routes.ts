@@ -3,24 +3,39 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { FarmerDashboardComponent } from './components/farmer-dashboard/farmer-dashboard.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LayoutComponent } from './components/layout/layout.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { StatusIndicatorComponent } from './components/status-indicator/status-indicator.component';
-
+import { FieldsComponent } from './components/fields/fields.component';
+import { CropsComponent } from './components/crops/crops.component';
+import { IrrigationComponent } from './components/irrigation/irrigation.component';
+import { WeatherComponent } from './components/weather/weather.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { WaterUsageComponent } from './components/water-usage/water-usage.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent }, // Default route
+  // Public routes that should NOT have the main layout (navbar, sidebar, footer)
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'admin-dashboard', component: AdminDashboardComponent },
-  { path: 'farmer-dashboard', component: FarmerDashboardComponent },
-  { path: 'footer', component: FooterComponent },
-  { path: 'layout', component: LayoutComponent },
-  { path: 'navbar', component: NavbarComponent },
-  { path: 'sidebar', component: SidebarComponent },
-  { path: 'status-indicator', component: StatusIndicatorComponent },
-  { path: '**', redirectTo: '' } // Redirect any other path to home
+
+  // Protected routes with layout
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent },
+      { path: 'dashboard', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'admin-dashboard', component: AdminDashboardComponent },
+      { path: 'farmer-dashboard', component: FarmerDashboardComponent },
+      { path: 'fields', component: FieldsComponent },
+      { path: 'crops', component: CropsComponent },
+      { path: 'irrigation', component: IrrigationComponent },
+      { path: 'weather', component: WeatherComponent },
+      { path: 'settings', component: SettingsComponent },
+      { path: 'water-usage', component: WaterUsageComponent }
+    ]
+  },
+
+  // Catch-all route - MUST be last
+  { path: '**', redirectTo: 'home' }
 ];

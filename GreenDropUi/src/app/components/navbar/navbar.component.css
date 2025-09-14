@@ -1,20 +1,148 @@
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border: 2px solid blue;
-  background-color: white;
-}
-
-.navbar-item {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: black;
-}
-
-.user-avatar {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
+.navbar {/* Additional custom styles if needed - using TailwindCSS primarily */
+  display: flex;/* Additional custom styles if needed - using TailwindCSS primarily */
+  justify-content: space-between;/* Additional custom styles if needed - using TailwindCSS primarily */
+  align-items: center;/* Additional custom styles if needed - using TailwindCSS primarily */
+  padding: 0.8rem 1.5rem;/* Additional custom styles if needed - using TailwindCSS primarily */
+  background-color: #2c3e50;/* Additional custom styles if needed - using TailwindCSS primarily */
+  color: #ecf0f1;/* Additional custom styles if needed - using TailwindCSS primarily */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);/* Additional custom styles if needed - using TailwindCSS primarily */
+  font-family: 'Arial', sans-serif;/* Additional custom styles if needed - using TailwindCSS primarily */
+  position: relative; /* Needed for absolute positioning of menu on mobile *//* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+.navbar-brand {/* Additional custom styles if needed - using TailwindCSS primarily */
+  display: flex;/* Additional custom styles if needed - using TailwindCSS primarily */
+  align-items: center;/* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+.navbar-brand .navbar-item {/* Additional custom styles if needed - using TailwindCSS primarily */
+  font-size: 1.5rem;/* Additional custom styles if needed - using TailwindCSS primarily */
+  font-weight: bold;/* Additional custom styles if needed - using TailwindCSS primarily */
+  color: #2ecc71;/* Additional custom styles if needed - using TailwindCSS primarily */
+  text-decoration: none;/* Additional custom styles if needed - using TailwindCSS primarily */
+  transition: color 0.3s ease;/* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+.navbar-brand .navbar-item:hover {/* Additional custom styles if needed - using TailwindCSS primarily */
+  color: #27ae60;/* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+.navbar-menu {/* Additional custom styles if needed - using TailwindCSS primarily */
+  display: flex;/* Additional custom styles if needed - using TailwindCSS primarily */
+  align-items: center;/* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+.navbar-item {/* Additional custom styles if needed - using TailwindCSS primarily */
+  margin: 0 1rem;/* Additional custom styles if needed - using TailwindCSS primarily */
+  text-decoration: none;/* Additional custom styles if needed - using TailwindCSS primarily */
+  color: #ecf0f1;/* Additional custom styles if needed - using TailwindCSS primarily */
+  padding: 0.5rem 0;/* Additional custom styles if needed - using TailwindCSS primarily */
+  transition: color 0.3s ease, border-bottom 0.3s ease;/* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+.navbar-item:hover {/* Additional custom styles if needed - using TailwindCSS primarily */
+  color: #3498db;/* Additional custom styles if needed - using TailwindCSS primarily */
+  border-bottom: 2px solid #3498db;/* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+.user-avatar {/* Additional custom styles if needed - using TailwindCSS primarily */
+  width: 2.5rem;/* Additional custom styles if needed - using TailwindCSS primarily */
+  height: 2.5rem;/* Additional custom styles if needed - using TailwindCSS primarily */
+  border-radius: 50%;/* Additional custom styles if needed - using TailwindCSS primarily */
+  object-fit: cover;/* Additional custom styles if needed - using TailwindCSS primarily */
+  border: 2px solid #3498db;/* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Hamburger menu button *//* Additional custom styles if needed - using TailwindCSS primarily */
+.navbar-burger {/* Additional custom styles if needed - using TailwindCSS primarily */
+  display: none; /* Hidden by default on larger screens *//* Additional custom styles if needed - using TailwindCSS primarily */
+  background: none;/* Additional custom styles if needed - using TailwindCSS primarily */
+  border: none;/* Additional custom styles if needed - using TailwindCSS primarily */
+  cursor: pointer;/* Additional custom styles if needed - using TailwindCSS primarily */
+  padding: 0;/* Additional custom styles if needed - using TailwindCSS primarily */
+  margin-left: 1rem;/* Additional custom styles if needed - using TailwindCSS primarily */
+  position: relative;/* Additional custom styles if needed - using TailwindCSS primarily */
+  width: 30px;/* Additional custom styles if needed - using TailwindCSS primarily */
+  height: 24px;/* Additional custom styles if needed - using TailwindCSS primarily */
+  z-index: 1000; /* Ensure it's above other content *//* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+.navbar-burger span {/* Additional custom styles if needed - using TailwindCSS primarily */
+  display: block;/* Additional custom styles if needed - using TailwindCSS primarily */
+  width: 100%;/* Additional custom styles if needed - using TailwindCSS primarily */
+  height: 3px;/* Additional custom styles if needed - using TailwindCSS primarily */
+  background-color: #ecf0f1;/* Additional custom styles if needed - using TailwindCSS primarily */
+  margin-bottom: 5px;/* Additional custom styles if needed - using TailwindCSS primarily */
+  position: relative;/* Additional custom styles if needed - using TailwindCSS primarily */
+  transform-origin: 4px 0px;/* Additional custom styles if needed - using TailwindCSS primarily */
+  transition: transform 0.3s ease, opacity 0.3s ease;/* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+.navbar-burger span:first-child {/* Additional custom styles if needed - using TailwindCSS primarily */
+  transform-origin: 0% 0%;/* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+.navbar-burger span:nth-last-child(2) {/* Additional custom styles if needed - using TailwindCSS primarily */
+  transform-origin: 0% 100%;/* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+.navbar-burger.is-active span:first-child {/* Additional custom styles if needed - using TailwindCSS primarily */
+  transform: rotate(45deg) translate(0px, -1px);/* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+.navbar-burger.is-active span:nth-last-child(2) {/* Additional custom styles if needed - using TailwindCSS primarily */
+  transform: rotate(-45deg) translate(0px, 1px);/* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+.navbar-burger.is-active span:nth-child(2) {/* Additional custom styles if needed - using TailwindCSS primarily */
+  opacity: 0;/* Additional custom styles if needed - using TailwindCSS primarily */
+  transform: rotate(0deg) scale(0.2, 0.2);/* Additional custom styles if needed - using TailwindCSS primarily */
+}/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Responsive styles *//* Additional custom styles if needed - using TailwindCSS primarily */
+@media (max-width: 768px) {/* Additional custom styles if needed - using TailwindCSS primarily */
+  .navbar {/* Additional custom styles if needed - using TailwindCSS primarily */
+    flex-wrap: wrap; /* Allow items to wrap *//* Additional custom styles if needed - using TailwindCSS primarily */
+  }/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+  .navbar-brand {/* Additional custom styles if needed - using TailwindCSS primarily */
+    flex-grow: 1; /* Allow brand to take available space *//* Additional custom styles if needed - using TailwindCSS primarily */
+    justify-content: space-between; /* Push burger to the right *//* Additional custom styles if needed - using TailwindCSS primarily */
+  }/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+  .navbar-burger {/* Additional custom styles if needed - using TailwindCSS primarily */
+    display: block; /* Show burger on small screens *//* Additional custom styles if needed - using TailwindCSS primarily */
+  }/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+  .navbar-menu {/* Additional custom styles if needed - using TailwindCSS primarily */
+    display: none; /* Hide menu by default on small screens *//* Additional custom styles if needed - using TailwindCSS primarily */
+    flex-direction: column;/* Additional custom styles if needed - using TailwindCSS primarily */
+    width: 100%;/* Additional custom styles if needed - using TailwindCSS primarily */
+    background-color: #34495e; /* Slightly different background for dropdown *//* Additional custom styles if needed - using TailwindCSS primarily */
+    position: absolute;/* Additional custom styles if needed - using TailwindCSS primarily */
+    top: 100%; /* Position below the navbar *//* Additional custom styles if needed - using TailwindCSS primarily */
+    left: 0;/* Additional custom styles if needed - using TailwindCSS primarily */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);/* Additional custom styles if needed - using TailwindCSS primarily */
+    padding: 1rem 0;/* Additional custom styles if needed - using TailwindCSS primarily */
+  }/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+  .navbar-menu.is-active {/* Additional custom styles if needed - using TailwindCSS primarily */
+    display: flex; /* Show menu when active *//* Additional custom styles if needed - using TailwindCSS primarily */
+  }/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+  .navbar-menu .navbar-item {/* Additional custom styles if needed - using TailwindCSS primarily */
+    margin: 0.5rem 1.5rem; /* Adjust margin for vertical layout *//* Additional custom styles if needed - using TailwindCSS primarily */
+    width: auto; /* Reset width *//* Additional custom styles if needed - using TailwindCSS primarily */
+    border-bottom: none; /* Remove underline for vertical items *//* Additional custom styles if needed - using TailwindCSS primarily */
+  }/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+  .navbar-menu .navbar-item:hover {/* Additional custom styles if needed - using TailwindCSS primarily */
+    border-bottom: none; /* Remove underline on hover for vertical items *//* Additional custom styles if needed - using TailwindCSS primarily */
+    color: #2ecc71; /* Highlight on hover *//* Additional custom styles if needed - using TailwindCSS primarily */
+  }/* Additional custom styles if needed - using TailwindCSS primarily */
+/* Additional custom styles if needed - using TailwindCSS primarily */
+  .navbar-menu .user-avatar {/* Additional custom styles if needed - using TailwindCSS primarily */
+    margin-top: 1rem;/* Additional custom styles if needed - using TailwindCSS primarily */
+  }/* Additional custom styles if needed - using TailwindCSS primarily */
 }

@@ -1,93 +1,387 @@
 <main class="admin-dashboard">
-  <h1>Admin Dashboard</h1>
-  <p>Manage all agricultural data effectively.</p>
+  <!-- Header Section -->
+  <div class="mb-8">
+    <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl shadow-lg p-6">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+        <div>
+          <h1 class="text-3xl font-bold mb-2">Admin Dashboard</h1>
+          <p class="text-purple-100">Manage all agricultural data and monitor system performance effectively.</p>
+        </div>
+        <div class="flex space-x-3">
+          <button class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200">
+            📊 Reports
+          </button>
+          <button class="bg-white text-purple-600 hover:bg-gray-50 px-4 py-2 rounded-lg font-medium transition-colors duration-200">
+            ⚙️ Settings
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <section class="fields-table">
-    <h2>Fields</h2>
-    <button class="add-button">Add Field</button>
-    <table>
-      <tr>
-        <th>Field Name</th>
-        <th>Size (hectares)</th>
-        <th>Soil Type</th>
-        <th>Crop</th>
-        <th>Actions</th>
-      </tr>
-      <tr>
-        <td>Field 1</td>
-        <td>2.5</td>
-        <td>Sandy Loam</td>
-        <td>Wheat</td>
-        <td>
-          <a>View Details</a> | <a>Edit</a> | <a>Remove</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Field 2</td>
-        <td>1.8</td>
-        <td>Clay</td>
-        <td>Corn</td>
-        <td>
-          <a>View Details</a> | <a>Edit</a> | <a>Remove</a>
-        </td>
-      </tr>
-    </table>
-    <img src="assets/field-generic.jpg" alt="Generic field" class="table-image">
-  </section>
+  <!-- System Overview Stats -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-gray-600">Total Users</p>
+          <p class="text-2xl font-bold text-gray-900">124</p>
+        </div>
+        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+          <span class="text-2xl">👥</span>
+        </div>
+      </div>
+      <p class="text-sm text-blue-600 mt-2">+12 this month</p>
+    </div>
 
-  <section class="crops-table">
-    <h2>Crops</h2>
-    <button class="add-button">Add Crop</button>
-    <table>
-      <tr>
-        <th>Crop Type</th>
-        <th>Water Requirements (Liters/Week)</th>
-        <th>Growing Season</th>
-        <th>Actions</th>
-      </tr>
-      <tr>
-        <td>Wheat</td>
-        <td>1500</td>
-        <td>Winter</td>
-        <td>
-          <a>View Details</a> | <a>Edit</a> | <a>Delete</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Corn</td>
-        <td>2000</td>
-        <td>Summer</td>
-        <td>
-          <a>View Details</a> | <a>Edit</a> | <a>Delete</a>
-        </td>
-      </tr>
-    </table>
-    <img src="assets/crop-generic.jpg" alt="Generic crop" class="table-image">
-  </section>
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-gray-600">Active Fields</p>
+          <p class="text-2xl font-bold text-gray-900">45</p>
+        </div>
+        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+          <span class="text-2xl">🌾</span>
+        </div>
+      </div>
+      <p class="text-sm text-green-600 mt-2">98% operational</p>
+    </div>
 
-  <section class="irrigation-table">
-    <h2>Irrigation Sessions</h2>
-    <button class="add-button">Book Session</button>
-    <table>
-      <tr>
-        <th>Crop</th>
-        <th>Field</th>
-        <th>Date</th>
-        <th>Time</th>
-        <th>Water Quantity</th>
-        <th>Status</th>
-        <th>Actions</th>
-      </tr>
-      <tr>
-        <td>Tomatoes</td>
-        <td>Field 1</td>
-        <td>Jul 15, 2024</td>
-        <td>10:00 AM</td>
-        <td>5000 L</td>
-        <td><app-status-indicator status="scheduled"></app-status-indicator></td>
-        <td><a>View Details</a></td>
-      </tr>
-    </table>
-    <img src="assets/irrigation-generic.jpg" alt="Generic irrigation" class="table-image">
-  </section>
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-gray-600">Water Usage</p>
+          <p class="text-2xl font-bold text-gray-900">125k</p>
+          <p class="text-xs text-gray-500">liters/day</p>
+        </div>
+        <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center">
+          <span class="text-2xl">💧</span>
+        </div>
+      </div>
+      <p class="text-sm text-cyan-600 mt-2">Optimal levels</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-gray-600">System Health</p>
+          <p class="text-2xl font-bold text-gray-900">99.8%</p>
+        </div>
+        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+          <span class="text-2xl">✨</span>
+        </div>
+      </div>
+      <p class="text-sm text-purple-600 mt-2">All systems online</p>
+    </div>
+  </div>
+
+  <!-- Management Sections -->
+  <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+    <!-- Fields Management -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div class="px-6 py-4 border-b border-gray-200 bg-green-50">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold text-gray-900 flex items-center">
+            <span class="text-2xl mr-2">🌾</span>
+            Fields Management
+          </h2>
+          <button class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors duration-200">
+            + Add Field
+          </button>
+        </div>
+      </div>
+      
+      <div class="p-6">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gray-200">
+                <th class="text-left py-2 font-medium text-gray-700">Field Name</th>
+                <th class="text-left py-2 font-medium text-gray-700">Size</th>
+                <th class="text-left py-2 font-medium text-gray-700">Crop</th>
+                <th class="text-left py-2 font-medium text-gray-700">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-100 hover:bg-gray-50">
+                <td class="py-3">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-lg">🌾</span>
+                    <span class="font-medium">North Field A</span>
+                  </div>
+                </td>
+                <td class="py-3 text-gray-600">8.5 ha</td>
+                <td class="py-3">
+                  <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">Wheat</span>
+                </td>
+                <td class="py-3">
+                  <div class="flex space-x-1">
+                    <button class="text-blue-600 hover:text-blue-800 text-xs">Edit</button>
+                    <button class="text-red-600 hover:text-red-800 text-xs">Delete</button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-100 hover:bg-gray-50">
+                <td class="py-3">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-lg">🌽</span>
+                    <span class="font-medium">South Field B</span>
+                  </div>
+                </td>
+                <td class="py-3 text-gray-600">6.2 ha</td>
+                <td class="py-3">
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Corn</span>
+                </td>
+                <td class="py-3">
+                  <div class="flex space-x-1">
+                    <button class="text-blue-600 hover:text-blue-800 text-xs">Edit</button>
+                    <button class="text-red-600 hover:text-red-800 text-xs">Delete</button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-lg">🍅</span>
+                    <span class="font-medium">Greenhouse East</span>
+                  </div>
+                </td>
+                <td class="py-3 text-gray-600">2.1 ha</td>
+                <td class="py-3">
+                  <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium">Tomatoes</span>
+                </td>
+                <td class="py-3">
+                  <div class="flex space-x-1">
+                    <button class="text-blue-600 hover:text-blue-800 text-xs">Edit</button>
+                    <button class="text-red-600 hover:text-red-800 text-xs">Delete</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Crops Management -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div class="px-6 py-4 border-b border-gray-200 bg-blue-50">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold text-gray-900 flex items-center">
+            <span class="text-2xl mr-2">🌱</span>
+            Crops Management
+          </h2>
+          <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors duration-200">
+            + Add Crop
+          </button>
+        </div>
+      </div>
+      
+      <div class="p-6">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gray-200">
+                <th class="text-left py-2 font-medium text-gray-700">Crop Type</th>
+                <th class="text-left py-2 font-medium text-gray-700">Water Req.</th>
+                <th class="text-left py-2 font-medium text-gray-700">Season</th>
+                <th class="text-left py-2 font-medium text-gray-700">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-100 hover:bg-gray-50">
+                <td class="py-3">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-lg">🌾</span>
+                    <span class="font-medium">Wheat</span>
+                  </div>
+                </td>
+                <td class="py-3 text-gray-600">1,500 L/week</td>
+                <td class="py-3">
+                  <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">Winter</span>
+                </td>
+                <td class="py-3">
+                  <div class="flex space-x-1">
+                    <button class="text-blue-600 hover:text-blue-800 text-xs">Edit</button>
+                    <button class="text-red-600 hover:text-red-800 text-xs">Delete</button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-100 hover:bg-gray-50">
+                <td class="py-3">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-lg">🌽</span>
+                    <span class="font-medium">Corn</span>
+                  </div>
+                </td>
+                <td class="py-3 text-gray-600">2,000 L/week</td>
+                <td class="py-3">
+                  <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">Summer</span>
+                </td>
+                <td class="py-3">
+                  <div class="flex space-x-1">
+                    <button class="text-blue-600 hover:text-blue-800 text-xs">Edit</button>
+                    <button class="text-red-600 hover:text-red-800 text-xs">Delete</button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="py-3">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-lg">🍅</span>
+                    <span class="font-medium">Tomatoes</span>
+                  </div>
+                </td>
+                <td class="py-3 text-gray-600">2,500 L/week</td>
+                <td class="py-3">
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Spring</span>
+                </td>
+                <td class="py-3">
+                  <div class="flex space-x-1">
+                    <button class="text-blue-600 hover:text-blue-800 text-xs">Edit</button>
+                    <button class="text-red-600 hover:text-red-800 text-xs">Delete</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Irrigation Sessions -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div class="px-6 py-4 border-b border-gray-200 bg-cyan-50">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold text-gray-900 flex items-center">
+            <span class="text-2xl mr-2">💧</span>
+            Irrigation Sessions
+          </h2>
+          <button class="bg-cyan-600 hover:bg-cyan-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors duration-200">
+            + Book Session
+          </button>
+        </div>
+      </div>
+      
+      <div class="p-6">
+        <div class="space-y-4">
+          <div class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center space-x-2">
+                <span class="text-lg">🍅</span>
+                <span class="font-medium text-gray-900">Tomatoes - Field East</span>
+              </div>
+              <app-status-indicator status="scheduled"></app-status-indicator>
+            </div>
+            <div class="text-sm text-gray-600 grid grid-cols-2 gap-2">
+              <span>📅 Jul 15, 2024</span>
+              <span>🕰️ 10:00 AM</span>
+              <span>💧 5,000 L</span>
+              <span>⏱️ 45 min</span>
+            </div>
+            <div class="mt-3 flex space-x-2">
+              <button class="text-blue-600 hover:text-blue-800 text-xs">View Details</button>
+              <button class="text-green-600 hover:text-green-800 text-xs">Edit</button>
+              <button class="text-red-600 hover:text-red-800 text-xs">Cancel</button>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center space-x-2">
+                <span class="text-lg">🌾</span>
+                <span class="font-medium text-gray-900">Wheat - Field North</span>
+              </div>
+              <app-status-indicator status="optimal"></app-status-indicator>
+            </div>
+            <div class="text-sm text-gray-600 grid grid-cols-2 gap-2">
+              <span>📅 Jul 16, 2024</span>
+              <span>🕰️ 6:00 AM</span>
+              <span>💧 3,200 L</span>
+              <span>⏱️ 30 min</span>
+            </div>
+            <div class="mt-3 flex space-x-2">
+              <button class="text-blue-600 hover:text-blue-800 text-xs">View Details</button>
+              <button class="text-green-600 hover:text-green-800 text-xs">Edit</button>
+              <button class="text-red-600 hover:text-red-800 text-xs">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Activity & System Logs -->
+  <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <!-- Recent Activity -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div class="px-6 py-4 border-b border-gray-200">
+        <h3 class="text-lg font-semibold text-gray-900">Recent Activity</h3>
+      </div>
+      <div class="p-6">
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+              <span class="text-sm">✅</span>
+            </div>
+            <div class="flex-1">
+              <p class="text-sm font-medium text-gray-900">Irrigation completed - North Field A</p>
+              <p class="text-xs text-gray-500">2 hours ago</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+              <span class="text-sm">👥</span>
+            </div>
+            <div class="flex-1">
+              <p class="text-sm font-medium text-gray-900">New farmer registered - Ahmed Ben Ali</p>
+              <p class="text-xs text-gray-500">4 hours ago</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
+              <span class="text-sm">⚠️</span>
+            </div>
+            <div class="flex-1">
+              <p class="text-sm font-medium text-gray-900">Weather alert - High winds expected</p>
+              <p class="text-xs text-gray-500">6 hours ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- System Performance -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div class="px-6 py-4 border-b border-gray-200">
+        <h3 class="text-lg font-semibold text-gray-900">System Performance</h3>
+      </div>
+      <div class="p-6">
+        <div class="space-y-4">
+          <div class="flex justify-between items-center">
+            <span class="text-gray-600">Server Uptime</span>
+            <span class="font-semibold text-green-600">99.8%</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-gray-600">API Response Time</span>
+            <span class="font-semibold text-blue-600">145ms</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-gray-600">Database Performance</span>
+            <span class="font-semibold text-purple-600">Excellent</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-gray-600">Storage Usage</span>
+            <span class="font-semibold text-orange-600">68%</span>
+          </div>
+          
+          <div class="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+            <p class="text-green-800 text-sm font-medium">✅ All systems are operating normally</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>

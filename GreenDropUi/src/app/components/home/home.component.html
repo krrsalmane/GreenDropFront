@@ -1,48 +1,213 @@
-<main class="home">
-  <section class="welcome">
-    <h1>Dashboard</h1>
-    <p>Here's your irrigation overview for today.</p>
-  </section>
-
-  <section class="weather">
-    <h2>Weather</h2>
-    <p>Sunny, 28°C</p>
-    <p>Beni Mellal, Morocco</p>
-    <img src="assets/weather-sunny.jpg" alt="Sunny weather">
-  </section>
-
-  <section class="irrigation">
-    <h2>Upcoming Irrigation</h2>
-    <div class="field">
-      <p>Field 1: Wheat</p>
-      <p class="next-session">Next session: Tomorrow, 6:00 AM</p>
-      <img src="assets/field-wheat.jpg" alt="Wheat field">
+<main class="home-page">
+  <!-- Welcome Header -->
+  <div class="mb-8">
+    <div class="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl shadow-lg p-6">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+        <div>
+          <h1 class="text-3xl font-bold mb-2">Welcome to your Farm Dashboard</h1>
+          <p class="text-green-100">Here's your irrigation overview for today - everything looks great!</p>
+        </div>
+        <div class="text-right">
+          <p class="text-green-100 text-sm">Today's Date</p>
+          <p class="text-white font-medium">September 14, 2024</p>
+        </div>
+      </div>
     </div>
-    <div class="field">
-      <p>Field 2: Olives</p>
-      <p class="next-session">Next session: In 2 days, 7:00 AM</p>
-      <img src="assets/field-olives.jpg" alt="Olive field">
-    </div>
-  </section>
+  </div>
 
-  <section class="field-status">
-    <h2>Field Status</h2>
-    <table>
-      <tr>
-        <th>Field</th>
-        <th>Crop</th>
-        <th>Status</th>
-      </tr>
-      <tr>
-        <td>Field 1</td>
-        <td>Wheat</td>
-        <td><span class="status optimal">Optimal</span></td>
-      </tr>
-      <tr>
-        <td>Field 2</td>
-        <td>Olives</td>
-        <td><span class="status needs-attention">Needs Attention</span></td>
-      </tr>
-    </table>
-  </section>
+  <!-- Quick Stats -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-gray-600">Active Fields</p>
+          <p class="text-2xl font-bold text-gray-900">8</p>
+        </div>
+        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+          <span class="text-2xl">🌾</span>
+        </div>
+      </div>
+      <p class="text-sm text-green-600 mt-2">All systems running</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-gray-600">Water Usage</p>
+          <p class="text-2xl font-bold text-gray-900">2.4k</p>
+          <p class="text-xs text-gray-500">liters today</p>
+        </div>
+        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+          <span class="text-2xl">💧</span>
+        </div>
+      </div>
+      <p class="text-sm text-blue-600 mt-2">15% below target</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-gray-600">Weather</p>
+          <p class="text-2xl font-bold text-gray-900">28°C</p>
+        </div>
+        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+          <span class="text-2xl">☀️</span>
+        </div>
+      </div>
+      <p class="text-sm text-yellow-600 mt-2">Perfect conditions</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-gray-600">Next Session</p>
+          <p class="text-2xl font-bold text-gray-900">2h</p>
+        </div>
+        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+          <span class="text-2xl">⏰</span>
+        </div>
+      </div>
+      <p class="text-sm text-purple-600 mt-2">Field A - Wheat</p>
+    </div>
+  </div>
+
+  <!-- Main Content Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+    <!-- Weather Section -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div class="bg-gradient-to-r from-sky-400 to-blue-500 p-6 text-white">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="text-xl font-semibold mb-1">Today's Weather</h2>
+            <p class="text-sky-100">Beni Mellal, Morocco</p>
+          </div>
+          <div class="text-4xl">☀️</div>
+        </div>
+      </div>
+      
+      <div class="p-6">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="text-center">
+            <p class="text-2xl font-bold text-gray-900">28°C</p>
+            <p class="text-gray-600 text-sm">Temperature</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-bold text-blue-600">65%</p>
+            <p class="text-gray-600 text-sm">Humidity</p>
+          </div>
+        </div>
+        
+        <div class="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+          <p class="text-green-800 text-sm font-medium">🌤️ Perfect irrigation conditions today</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upcoming Irrigation -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div class="px-6 py-4 border-b border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">Upcoming Irrigation</h2>
+      </div>
+      
+      <div class="p-6 space-y-4">
+        <div class="flex items-center justify-between p-4 bg-green-50 border border-green-200 rounded-lg">
+          <div class="flex items-center space-x-3">
+            <span class="text-2xl">🌾</span>
+            <div>
+              <p class="font-medium text-gray-900">Field 1: Wheat</p>
+              <p class="text-sm text-gray-600">North section</p>
+            </div>
+          </div>
+          <div class="text-right">
+            <p class="font-medium text-green-600">Tomorrow</p>
+            <p class="text-sm text-gray-500">6:00 AM</p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between p-4 bg-blue-50 border border-blue-200 rounded-lg">
+          <div class="flex items-center space-x-3">
+            <span class="text-2xl">🫒</span>
+            <div>
+              <p class="font-medium text-gray-900">Field 2: Olives</p>
+              <p class="text-sm text-gray-600">West section</p>
+            </div>
+          </div>
+          <div class="text-right">
+            <p class="font-medium text-blue-600">In 2 days</p>
+            <p class="text-sm text-gray-500">7:00 AM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Field Status Table -->
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+    <div class="px-6 py-4 border-b border-gray-200">
+      <h2 class="text-xl font-semibold text-gray-900">Field Status Overview</h2>
+    </div>
+    
+    <div class="overflow-x-auto">
+      <table class="w-full">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Field</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Crop</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Irrigation</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4 whitespace-nowrap">
+              <div class="flex items-center">
+                <span class="text-lg mr-2">🌾</span>
+                <div class="text-sm font-medium text-gray-900">Field 1</div>
+              </div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <div class="text-sm text-gray-900">Wheat</div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                <span class="w-1.5 h-1.5 bg-green-400 rounded-full mr-1.5"></span>
+                Optimal
+              </span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+              2 hours ago
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+              <button class="text-green-600 hover:text-green-900">View Details</button>
+            </td>
+          </tr>
+
+          <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4 whitespace-nowrap">
+              <div class="flex items-center">
+                <span class="text-lg mr-2">🫒</span>
+                <div class="text-sm font-medium text-gray-900">Field 2</div>
+              </div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <div class="text-sm text-gray-900">Olives</div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                <span class="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-1.5"></span>
+                Needs Attention
+              </span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+              5 hours ago
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+              <button class="text-yellow-600 hover:text-yellow-900">Schedule Irrigation</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </main>

@@ -1,17 +1,82 @@
-<nav class="sidebar">
-  <a routerLink="/dashboard" class="sidebar-item">
-    <span class="icon">🏠</span> Dashboard
-  </a>
-  <a routerLink="/crops" class="sidebar-item active">
-    <span class="icon">🌱</span> Crops
-  </a>
-  <a routerLink="/irrigation-schedules" class="sidebar-item">
-    <span class="icon">💧</span> Irrigation Schedules
-  </a>
-  <a routerLink="/water-usage" class="sidebar-item">
-    <span class="icon">🌊</span> Water Usage
-  </a>
-  <a routerLink="/settings" class="sidebar-item">
-    <span class="icon">⚙️</span> Settings
-  </a>
-</nav>
+<aside class="w-64 bg-white shadow-lg h-full border-r border-gray-200">
+  <div class="p-4">
+    <h3 class="text-lg font-semibold text-gray-800 mb-4">Navigation</h3>
+  </div>
+  
+  <nav class="mt-4">
+    <div class="px-4 space-y-2">
+      <!-- Dashboard Section -->
+      <a routerLink="/home" routerLinkActive="bg-green-50 border-r-4 border-green-500 text-green-700" 
+         class="flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-green-50 hover:text-green-700 transition-colors duration-200 group">
+        <span class="text-xl mr-3 group-hover:scale-110 transition-transform duration-200">🏠</span>
+        <span class="font-medium">Dashboard</span>
+      </a>
+      
+      <!-- Crops Management -->
+      <a routerLink="/crops" routerLinkActive="bg-green-50 border-r-4 border-green-500 text-green-700" 
+         class="flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-green-50 hover:text-green-700 transition-colors duration-200 group">
+        <span class="text-xl mr-3 group-hover:scale-110 transition-transform duration-200">🌱</span>
+        <span class="font-medium">Crops</span>
+      </a>
+      
+      <!-- Fields Management -->
+      <a routerLink="/fields" routerLinkActive="bg-green-50 border-r-4 border-green-500 text-green-700" 
+         class="flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-green-50 hover:text-green-700 transition-colors duration-200 group">
+        <span class="text-xl mr-3 group-hover:scale-110 transition-transform duration-200">🌾</span>
+        <span class="font-medium">Fields</span>
+      </a>
+      
+      <!-- Irrigation -->
+      <a routerLink="/irrigation" routerLinkActive="bg-green-50 border-r-4 border-green-500 text-green-700" 
+         class="flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-green-50 hover:text-green-700 transition-colors duration-200 group">
+        <span class="text-xl mr-3 group-hover:scale-110 transition-transform duration-200">💧</span>
+        <span class="font-medium">Irrigation</span>
+      </a>
+      
+      <!-- Weather -->
+      <a routerLink="/weather" routerLinkActive="bg-green-50 border-r-4 border-green-500 text-green-700" 
+         class="flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-green-50 hover:text-green-700 transition-colors duration-200 group">
+        <span class="text-xl mr-3 group-hover:scale-110 transition-transform duration-200">☁️</span>
+        <span class="font-medium">Weather</span>
+      </a>
+      
+      <!-- Water Usage Analytics -->
+      <a routerLink="/water-usage" routerLinkActive="bg-green-50 border-r-4 border-green-500 text-green-700" 
+         class="flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-green-50 hover:text-green-700 transition-colors duration-200 group">
+        <span class="text-xl mr-3 group-hover:scale-110 transition-transform duration-200">🌊</span>
+        <span class="font-medium">Water Usage</span>
+      </a>
+    </div>
+    
+    <!-- Divider -->
+    <div class="my-6 border-t border-gray-200"></div>
+    
+    <!-- Settings Section -->
+    <div class="px-4 space-y-2">
+      <a routerLink="/settings" routerLinkActive="bg-green-50 border-r-4 border-green-500 text-green-700" 
+         class="flex items-center px-4 py-3 text-gray-700 rounded-lg hover:bg-green-50 hover:text-green-700 transition-colors duration-200 group">
+        <span class="text-xl mr-3 group-hover:scale-110 transition-transform duration-200">⚙️</span>
+        <span class="font-medium">Settings</span>
+      </a>
+    </div>
+  </nav>
+  
+  <!-- Quick Stats Card -->
+  <div class="mt-8 mx-4 p-4 bg-gradient-to-br from-green-50 to-blue-50 rounded-lg border border-green-200">
+    <h4 class="text-sm font-semibold text-green-800 mb-2">Quick Stats</h4>
+    <div class="space-y-2 text-sm text-gray-600">
+      <div class="flex justify-between">
+        <span>Active Fields</span>
+        <span class="font-medium text-green-600">12</span>
+      </div>
+      <div class="flex justify-between">
+        <span>Water Saved</span>
+        <span class="font-medium text-blue-600">2.4k L</span>
+      </div>
+      <div class="flex justify-between">
+        <span>Next Irrigation</span>
+        <span class="font-medium text-orange-600">2h</span>
+      </div>
+    </div>
+  </div>
+</aside>

@@ -1,0 +1,375 @@
+<main class="crops-page">
+  <!-- Header Section -->
+  <div class="mb-8">
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+        <div>
+          <h1 class="text-3xl font-bold text-gray-900 mb-2">Crop Management</h1>
+          <p class="text-gray-600">Manage crop varieties, monitor growth stages, and optimize growing conditions.</p>
+        </div>
+        <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-2">
+          <span>🌱</span>
+          <span>Add New Crop</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Crop Stats -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-gray-600">Crop Varieties</p>
+          <p class="text-2xl font-bold text-gray-900">12</p>
+        </div>
+        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+          <span class="text-2xl">🌾</span>
+        </div>
+      </div>
+      <p class="text-sm text-green-600 mt-2">3 seasonal varieties</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-gray-600">Active Crops</p>
+          <p class="text-2xl font-bold text-gray-900">8</p>
+        </div>
+        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+          <span class="text-2xl">🌱</span>
+        </div>
+      </div>
+      <p class="text-sm text-blue-600 mt-2">Growing season</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-gray-600">Avg Water Need</p>
+          <p class="text-2xl font-bold text-gray-900">1.8k</p>
+          <p class="text-xs text-gray-500">L/week</p>
+        </div>
+        <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center">
+          <span class="text-2xl">💧</span>
+        </div>
+      </div>
+      <p class="text-sm text-cyan-600 mt-2">Optimized usage</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-gray-600">Yield Forecast</p>
+          <p class="text-2xl font-bold text-gray-900">95%</p>
+        </div>
+        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+          <span class="text-2xl">📊</span>
+        </div>
+      </div>
+      <p class="text-sm text-yellow-600 mt-2">Above average</p>
+    </div>
+  </div>
+
+  <!-- Crop Categories -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+    <!-- Cereals -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 p-4">
+        <div class="flex items-center space-x-3">
+          <span class="text-2xl">🌾</span>
+          <h3 class="text-xl font-bold text-white">Cereals</h3>
+        </div>
+      </div>
+      <div class="p-6">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <div class="flex items-center space-x-3">
+              <span class="text-lg">🌾</span>
+              <div>
+                <p class="font-medium text-gray-900">Wheat</p>
+                <p class="text-sm text-gray-500">Winter variety</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-medium text-green-600">1,500 L/week</p>
+              <p class="text-xs text-gray-500">Water needs</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <div class="flex items-center space-x-3">
+              <span class="text-lg">🌽</span>
+              <div>
+                <p class="font-medium text-gray-900">Corn</p>
+                <p class="text-sm text-gray-500">Sweet corn</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-medium text-blue-600">2,000 L/week</p>
+              <p class="text-xs text-gray-500">Water needs</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <div class="flex items-center space-x-3">
+              <span class="text-lg">🌾</span>
+              <div>
+                <p class="font-medium text-gray-900">Barley</p>
+                <p class="text-sm text-gray-500">Spring variety</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-medium text-cyan-600">1,200 L/week</p>
+              <p class="text-xs text-gray-500">Water needs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vegetables -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div class="bg-gradient-to-r from-green-500 to-green-600 p-4">
+        <div class="flex items-center space-x-3">
+          <span class="text-2xl">🥬</span>
+          <h3 class="text-xl font-bold text-white">Vegetables</h3>
+        </div>
+      </div>
+      <div class="p-6">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <div class="flex items-center space-x-3">
+              <span class="text-lg">🍅</span>
+              <div>
+                <p class="font-medium text-gray-900">Tomatoes</p>
+                <p class="text-sm text-gray-500">Cherry variety</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-medium text-red-600">2,500 L/week</p>
+              <p class="text-xs text-gray-500">Water needs</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <div class="flex items-center space-x-3">
+              <span class="text-lg">🥒</span>
+              <div>
+                <p class="font-medium text-gray-900">Cucumbers</p>
+                <p class="text-sm text-gray-500">Greenhouse</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-medium text-green-600">1,800 L/week</p>
+              <p class="text-xs text-gray-500">Water needs</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <div class="flex items-center space-x-3">
+              <span class="text-lg">🥕</span>
+              <div>
+                <p class="font-medium text-gray-900">Carrots</p>
+                <p class="text-sm text-gray-500">Orange variety</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-medium text-orange-600">1,400 L/week</p>
+              <p class="text-xs text-gray-500">Water needs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fruits -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div class="bg-gradient-to-r from-red-500 to-red-600 p-4">
+        <div class="flex items-center space-x-3">
+          <span class="text-2xl">🍎</span>
+          <h3 class="text-xl font-bold text-white">Fruits</h3>
+        </div>
+      </div>
+      <div class="p-6">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <div class="flex items-center space-x-3">
+              <span class="text-lg">🍎</span>
+              <div>
+                <p class="font-medium text-gray-900">Apples</p>
+                <p class="text-sm text-gray-500">Red delicious</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-medium text-red-600">1,600 L/week</p>
+              <p class="text-xs text-gray-500">Water needs</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <div class="flex items-center space-x-3">
+              <span class="text-lg">🍊</span>
+              <div>
+                <p class="font-medium text-gray-900">Oranges</p>
+                <p class="text-sm text-gray-500">Valencia</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-medium text-orange-600">2,200 L/week</p>
+              <p class="text-xs text-gray-500">Water needs</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <div class="flex items-center space-x-3">
+              <span class="text-lg">🫒</span>
+              <div>
+                <p class="font-medium text-gray-900">Olives</p>
+                <p class="text-sm text-gray-500">Traditional</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-medium text-green-600">800 L/week</p>
+              <p class="text-xs text-gray-500">Water needs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seasonal Calendar -->
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+    <div class="px-6 py-4 border-b border-gray-200">
+      <h2 class="text-xl font-semibold text-gray-900">Seasonal Planting Calendar</h2>
+      <p class="text-gray-600 mt-1">Optimal planting times for different crops in your region</p>
+    </div>
+    
+    <div class="p-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Spring -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+            <span class="text-2xl">🌸</span>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Spring</h3>
+          <div class="space-y-1 text-sm text-gray-600">
+            <p>Tomatoes</p>
+            <p>Cucumbers</p>
+            <p>Corn</p>
+            <p>Carrots</p>
+          </div>
+        </div>
+
+        <!-- Summer -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3">
+            <span class="text-2xl">☀️</span>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Summer</h3>
+          <div class="space-y-1 text-sm text-gray-600">
+            <p>Melons</p>
+            <p>Peppers</p>
+            <p>Beans</p>
+            <p>Squash</p>
+          </div>
+        </div>
+
+        <!-- Fall -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
+            <span class="text-2xl">🍂</span>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Fall</h3>
+          <div class="space-y-1 text-sm text-gray-600">
+            <p>Wheat</p>
+            <p>Barley</p>
+            <p>Lettuce</p>
+            <p>Radishes</p>
+          </div>
+        </div>
+
+        <!-- Winter -->
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+            <span class="text-2xl">❄️</span>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Winter</h3>
+          <div class="space-y-1 text-sm text-gray-600">
+            <p>Cabbage</p>
+            <p>Kale</p>
+            <p>Spinach</p>
+            <p>Peas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Growth Stages Monitor -->
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+    <div class="px-6 py-4 border-b border-gray-200">
+      <h2 class="text-xl font-semibold text-gray-900">Current Growth Stages</h2>
+      <p class="text-gray-600 mt-1">Monitor the growth progress of your active crops</p>
+    </div>
+    
+    <div class="p-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Growth Stage 1 -->
+        <div class="border border-gray-200 rounded-lg p-4">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center space-x-2">
+              <span class="text-lg">🌾</span>
+              <h4 class="font-medium text-gray-900">Wheat - Field A</h4>
+            </div>
+            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Flowering</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2 mb-3">
+            <div class="bg-green-600 h-2 rounded-full" style="width: 75%"></div>
+          </div>
+          <div class="flex justify-between text-sm text-gray-600">
+            <span>Day 85 of 120</span>
+            <span>75% Complete</span>
+          </div>
+        </div>
+
+        <!-- Growth Stage 2 -->
+        <div class="border border-gray-200 rounded-lg p-4">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center space-x-2">
+              <span class="text-lg">🍅</span>
+              <h4 class="font-medium text-gray-900">Tomatoes - Greenhouse</h4>
+            </div>
+            <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">Fruiting</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2 mb-3">
+            <div class="bg-yellow-500 h-2 rounded-full" style="width: 60%"></div>
+          </div>
+          <div class="flex justify-between text-sm text-gray-600">
+            <span>Day 45 of 90</span>
+            <span>60% Complete</span>
+          </div>
+        </div>
+
+        <!-- Growth Stage 3 -->
+        <div class="border border-gray-200 rounded-lg p-4">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center space-x-2">
+              <span class="text-lg">🌽</span>
+              <h4 class="font-medium text-gray-900">Corn - Field B</h4>
+            </div>
+            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Vegetative</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2 mb-3">
+            <div class="bg-blue-600 h-2 rounded-full" style="width: 30%"></div>
+          </div>
+          <div class="flex justify-between text-sm text-gray-600">
+            <span>Day 25 of 110</span>
+            <span>30% Complete</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,16 +1,79 @@
-<nav class="navbar">
-    <div class="navbar-brand">
-      <a routerLink="/" class="navbar-item">GreenDrop</a>
-    </div>
-    <div class="navbar-menu">
-      <a routerLink="/dashboard" class="navbar-item">Dashboard</a>
-      <a routerLink="/fields" class="navbar-item">Fields</a>
-      <a routerLink="/crops" class="navbar-item">Crops</a>
-      <a routerLink="/irrigation" class="navbar-item">Irrigation</a>
-      <a routerLink="/weather" class="navbar-item">Weather</a>
-      <a routerLink="/settings" class="navbar-item">Settings</a>
-      <div class="navbar-item">
-        <img src="assets/user-avatar.png" alt="User" class="user-avatar">
+<nav class="bg-gradient-to-r from-green-700 to-green-600 shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Brand -->
+      <div class="flex items-center">
+        <div class="flex-shrink-0">
+          <a routerLink="/home" class="flex items-center space-x-2 text-white hover:text-green-100 transition-colors duration-200">
+            <div class="w-8 h-8 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+              <span class="text-xl">🌱</span>
+            </div>
+            <span class="text-xl font-bold tracking-wide">GreenDrop</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-4">
+          <a routerLink="/home" routerLinkActive="bg-green-800" class="text-white hover:bg-green-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Home</a>
+          <a routerLink="/admin-dashboard" routerLinkActive="bg-green-800" class="text-white hover:bg-green-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Admin</a>
+          <a routerLink="/farmer-dashboard" routerLinkActive="bg-green-800" class="text-white hover:bg-green-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Dashboard</a>
+          <a routerLink="/fields" routerLinkActive="bg-green-800" class="text-white hover:bg-green-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Fields</a>
+          <a routerLink="/crops" routerLinkActive="bg-green-800" class="text-white hover:bg-green-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Crops</a>
+          <a routerLink="/irrigation" routerLinkActive="bg-green-800" class="text-white hover:bg-green-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Irrigation</a>
+        </div>
+      </div>
+
+      <!-- User Menu -->
+      <div class="hidden md:block">
+        <div class="ml-4 flex items-center md:ml-6 space-x-3">
+          <a routerLink="/login" class="text-white hover:text-green-100 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Login</a>
+          <a routerLink="/register" class="bg-white text-green-700 hover:bg-green-50 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200">Register</a>
+          <div class="ml-3 relative">
+            <div class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+              <span class="text-white text-sm">👤</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button
+          (click)="toggleMenu()"
+          class="text-white hover:text-green-100 hover:bg-green-600 p-2 rounded-md transition-colors duration-200"
+          [class.bg-green-600]="isMenuOpen"
+        >
+          <svg class="h-6 w-6" [class.hidden]="isMenuOpen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="h-6 w-6" [class.hidden]="!isMenuOpen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
     </div>
-  </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="md:hidden" [class.hidden]="!isMenuOpen">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-green-800">
+      <a routerLink="/home" routerLinkActive="bg-green-900" class="text-white hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Home</a>
+      <a routerLink="/admin-dashboard" routerLinkActive="bg-green-900" class="text-white hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Admin Dashboard</a>
+      <a routerLink="/farmer-dashboard" routerLinkActive="bg-green-900" class="text-white hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Farmer Dashboard</a>
+      <a routerLink="/fields" routerLinkActive="bg-green-900" class="text-white hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Fields</a>
+      <a routerLink="/crops" routerLinkActive="bg-green-900" class="text-white hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Crops</a>
+      <a routerLink="/irrigation" routerLinkActive="bg-green-900" class="text-white hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Irrigation</a>
+      <a routerLink="/weather" routerLinkActive="bg-green-900" class="text-white hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Weather</a>
+      <a routerLink="/settings" routerLinkActive="bg-green-900" class="text-white hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Settings</a>
+      
+      <div class="border-t border-green-600 pt-4 pb-3">
+        <div class="flex items-center px-3 space-x-3">
+          <a routerLink="/login" class="text-white hover:text-green-100 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Login</a>
+          <a routerLink="/register" class="bg-white text-green-700 hover:bg-green-50 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

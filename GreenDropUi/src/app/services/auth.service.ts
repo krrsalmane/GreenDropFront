@@ -6,8 +6,8 @@ import { Observable, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  // The base URL of your Spring Boot backend
-  private apiUrl = 'http://localhost:8082/api/auth';
+  // The base URL of your Spring Boot backend (running on port 8182)
+  private apiUrl = 'http://localhost:8183/api/auth';
 
   constructor(private http: HttpClient) { }
 
@@ -16,6 +16,8 @@ export class AuthService {
    * @param userData The user's registration data.
    */
   register(userData: any): Observable<any> {
+    console.log('AuthService: Sending registration data to backend:', userData);
+    console.log('AuthService: Making POST request to:', `${this.apiUrl}/register`);
     return this.http.post(`${this.apiUrl}/register`, userData);
   }
 

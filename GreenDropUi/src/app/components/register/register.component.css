@@ -1,5 +1,27 @@
-.page-background {
-  background-image: url('https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-  background-size: cover;
-  background-position: center;
+/* Enhanced Register Component Styles */
+.register-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Custom focus states for better UX */
+input:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.15);
+}
+
+button:focus {
+  transform: translateY(-1px);
+}
+
+/* Grid layout for name fields */
+.name-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Smooth animations */
+* {
+  transition: all 0.2s ease-in-out;
 }
